@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ChatView</string>
+    <string name="ok">OK</string>
+    <string name="send">送信</string>
+    <string name="send_hint">メッセージを入力</string>
+    <string name="docomo_suggest_message">自動返答を表示させる場合は、Docomo雑談対話のAPI keyを適宜設定して下さい。</string>
+    <string name="goto_docomo_site">Docomoサイトに移動</string>
+</resources>

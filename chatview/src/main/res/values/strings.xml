@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">chatview</string>
+    <string name="readdone">(既読)</string>
+</resources>

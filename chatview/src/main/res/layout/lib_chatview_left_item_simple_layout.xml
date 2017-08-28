@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"   ?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@null"
+              android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:id="@+id/com_hnimrod_chatview_left_layout_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/spacing_xsmall"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_gravity="bottom"
+            android:padding="@dimen/spacing_small"
+            android:scaleType="centerInside"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/com_hnimrod_simple_chatview_left_layout_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_medium"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+
+                <TextView
+                    android:id="@+id/com_hnimrod_simple_chatview_left_layout_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_medium"
+                    android:layout_weight="1"
+                    android:background="@drawable/speech_white_left"
+                    android:minHeight="40dp"
+                    android:minWidth="100dp"
+                    android:paddingLeft="@dimen/spacing_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_xsmall"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:layout_marginRight="@dimen/spacing_medium"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/com_hnirmod_simple_chatview_left_layout_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/com_hnimrod_simple_chatview_left_layout_readdone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/readdone"
+                        android:visibility="gone"
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="100"
+        />
+
+</LinearLayout>
