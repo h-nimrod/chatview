@@ -1,6 +1,6 @@
 package com.hnimrod.chatview;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public class ChatEntity {
     public static enum TYPE {
