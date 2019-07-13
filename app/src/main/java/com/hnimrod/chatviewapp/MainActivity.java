@@ -33,7 +33,7 @@ import io.reactivex.disposables.Disposable;
 
 
 public class MainActivity extends AppCompatActivity {
-    private static final String DOCOMO_WEBSITE_URL = "https://dev.smt.docomo.ne.jp/?p=docs.api.page&api_name=dialogue";
+    private static final String TALKAPI_WEBSITE_URL = "https://a3rt.recruit-tech.co.jp/product/talkAPI/";
     private static final String YOUR_IMAGE_URL = "https://avatars0.githubusercontent.com/u/7565281?v=4&s=160";
 
     @BindView(R.id.layout_chatview) ChatView chatView;
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        if (!canUseDocomoApi() && !showDocomoMessageDone) {
+        if (!canUseTalkApi() && !showDocomoMessageDone) {
             showSuggestionUseDocomoApiDialog();
             showDocomoMessageDone = true;
         }
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void replyMessage(@NonNull String sendMessage, int sendIdx) {
-        Single<String> replySingle = canUseDocomoApi() ? DialogueClient.getReply(sendMessage) :
+        Single<String> replySingle = canUseTalkApi() ? DialogueClient.getReply(sendMessage) :
                 Single.timer(1, TimeUnit.SECONDS).observeOn(AndroidSchedulers.mainThread()).flatMap(done -> Single.just(sendMessage));
 
         Disposable disposable = replySingle.subscribe(reply -> {
@@ -150,17 +150,17 @@ public class MainActivity extends AppCompatActivity {
         subscribe(disposable);
     }
 
-    private boolean canUseDocomoApi() {
+    private boolean canUseTalkApi() {
         return !TextUtils.isEmpty(DialogueClient.API_KEY);
     }
 
     private void showSuggestionUseDocomoApiDialog() {
         new AlertDialog.Builder(this)
                 .setCancelable(false)
-                .setMessage(R.string.docomo_suggest_message)
+                .setMessage(R.string.talkapi_suggest_message)
                 .setPositiveButton(R.string.ok, (dialog, ok) -> dialog.dismiss())
-                .setNegativeButton(R.string.goto_docomo_site, (dialog, which) -> {
-                    Uri uri = Uri.parse(DOCOMO_WEBSITE_URL);
+                .setNegativeButton(R.string.goto_talkapi_site, (dialog, which) -> {
+                    Uri uri = Uri.parse(TALKAPI_WEBSITE_URL);
                     Intent i = new Intent(Intent.ACTION_VIEW,uri);
                     startActivity(i);
                 })
