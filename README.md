@@ -1,8 +1,8 @@
 # ChatView
 
 チャット画面用のCustomViewです。
-サンプルでDocomo雑談対話APIを利用しています。
-実際の利用に際しては、各自でDocomo雑談対話APIのアプリケーションの利用申請が必要になります。
+サンプルではTalk APIを利用しています。
+実際の利用に際しては、各自でTalk APIのAPIキーを取得する必要があります。
 
 ![](image/screen.png)
 
@@ -48,14 +48,14 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 
-#### Docomo雑談対話API対応
+#### Talk API対応
 
-Docomo雑談対話APIを使うためには、[docomo Developer support](https://dev.smt.docomo.ne.jp/?p=login)への登録が必要になります。
+Talk APIを使うためには、[Talk API](https://a3rt.recruit-tech.co.jp/product/talkAPI/) への登録が必要になります。
 
-docomo Developer support からアプリケーションの登録申請を行い、
-発行された API key を、`DialogueClient.java` の `API_KEY` に設定して、
+Talk APIページからのAPIキーの取得を行い、
+取得したAPIキーを、`DialogueClient.java` の `API_KEY` に設定して、
 ビルドし直してください。
 
 ```DialogueClient.java
-public static final String API_KEY = ""; // Docomo 雑談対話 API keyを設定してください
+public static final String API_KEY = ""; // Talk APIの API keyを設定してください
 ```
