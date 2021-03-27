@@ -1,2 +1,1 @@
-rootProject.name='Chatview'
-include ':app'
+include ':app', ':chatview'

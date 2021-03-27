@@ -1,18 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_above="@id/edit_text_area"
+        android:layout_alignParentTop="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <requestFocus />
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.hnimrod.chatview.ChatView
+            android:id="@+id/layout_chatview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_text_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_small"
+        android:visibility="visible"
+        android:windowSoftInputMode="adjustResize"
+        >
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:hint="@string/send_hint"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:minHeight="@dimen/spacing_xlarge"
+            android:padding="@dimen/spacing_small"
+            android:textSize="@dimen/text_size_xsmall"
+            />
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="38dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="4dp"
+            android:background="@color/blue"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xsmall"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

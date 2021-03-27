@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <ListView
+        android:id="@+id/custom_list2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:divider="@null"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/custom_edit_text_area2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_small"
+        android:visibility="gone"
+        android:windowSoftInputMode="adjustResize"
+        >
+
+        <EditText
+            android:id="@+id/custom_edit_text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:background="@drawable/shape_dnd"
+            android:hint=""
+            android:maxLines="5"
+            android:minHeight="@dimen/spacing_xlarge"
+            android:padding="@dimen/spacing_small"
+            android:textSize="@dimen/text_size_xsmall"
+            />
+
+        <Button
+            android:id="@+id/custom_submit_button2"
+            android:layout_width="38dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="4dp"
+            android:background="@color/green"
+            android:text="Send"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"   ?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@null"
+              android:orientation="horizontal"
+    >
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="100"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/com_hnimrod_simple_chatview_right_layout_readdone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/readdone"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:id="@+id/com_hnimrod_simple_chatview_right_layout_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/com_hnimrod_simple_chatview_right_layout_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:background="@drawable/speech_green_right"
+            android:minHeight="40dp"
+            android:minWidth="100dp"
+            android:paddingRight="@dimen/spacing_small"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_xsmall"
+            />
+
+        <ImageView
+            android:id="@+id/com_hnimrod_simple_chatview_right_layout_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/spacing_medium"
+            android:layout_weight="0"
+            android:scaleType="fitCenter"
+            android:src="@drawable/noimage"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</LinearLayout>
